@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/***** BASE STYLES *****/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    margin: auto;
+}
+
+/*****Floating Back-To-Top Button*****/
+
+#myBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 18.5%;
+    left: 77.25%;
+    max-width: 30px;
+    width: 100%;
+    font-size: 12px;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: rgb(100,100,100);
+    padding: .5px;
+    border-radius: 4px;
+}
+
+/*****On Hover Color Change*****/
+
+#myBtn:hover {
+    background-color: #087e8b;
+}
+
+/***** GRID *****/
+
+.full-width {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.half-width {
+    float: left;
+    width: 600px;
+}
+
+.third-width {
+    float: left; 
+    padding-bottom: 10px;
+    padding-top: 5px;
+    width: 400px;
+}
+
+/***** HEADER *****/
+
+header {
+    background-image: url("../img/hero-image.png");
+    background-size: cover;
+    height: 808px;
+}
+
+h1 {
+    color: #bdbf09;
+    font-weight: bold;
+    font-size: 55px;
+    margin: auto;
+    padding-top: 361px;
+    text-align: center;
+}
+
+p {
+    color: #095256;
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    text-align: center;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-right: 75px;
+    padding-top: 25px;
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul li a {
+    color: #0d7075;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/***** PORTFOLIO *****/
+
+#portfolio {
+    height: 1438px;
+    margin-left: 104px;
+    margin-right: 102px;
+    padding-bottom: 95px;
+}
+
+#portfolio h2 {
+    font-size: 36px;
+    padding-bottom: 52px;
+    text-align: center;
+}
+
+#portfolio p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    padding-bottom: 75px;
+    padding-left: 48px;
+    text-align: left;
+}
+
+#portfolio .heading {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.half-width #rogue-pickings, .half-width #jubilee, .half-width #recipe {
+    box-sizing: border-box;
+    float: left;
+    width: 600px;
+}
+
+#rogue-pickings .image, #jubilee .image, #recipe .image {
+    padding: 35px 0 55px 0;
+}
+
+/***** ABOUT-ME *****/
+ 
+#about-me {
+    background-color: #087e8b;
+    height: 648px;
+    margin-right: 102px;
+    overflow: hidden;
+    padding-bottom: 95px;
+    width: 100%;
+}  
+
+#about-me h2 {
+    color: white;
+    font-size: 36px;
+    padding-bottom: 28px;
+    text-align: center;
+}
+
+#about-me p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    text-align: left;
+}
+
+.half-width #about-me {
+    float: left;
+    width: 600px;
+}
+
+#about-me .image {
+    padding-top: 24px;    
+}
+
+/***** CONTACT *****/
+
+#contact .full-width {
+    background-color: #095156;
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#contact h2 {
+    color: white;
+    font-size: 36px;
+    padding-bottom: 28px;
+    text-align: center;
+}
+
+#contact h5 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#hire-me p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+#follow-me ul {
+    list-style-position: inside;
+    text-align: center;
+}
+
+#follow-me ul li {
+    display: inline-block;
+}
+
+#follow-me ul img {
+    font-size: 24px;
+    padding-right: 40px;
+}
+
+#meet-me p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+#columns .third-width {
+    float: left;
+    height: 199px;
+    width: 33.33%;
+}
+
+/***** COPYRIGHT *****/
+
+#copyright .full-width {
+    background-color: #095156;
+    height: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+
+#copyright h5 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
