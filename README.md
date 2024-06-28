@@ -53,20 +53,31 @@ Project Structure
 The project structure is as follows:
 Milestone-Project/
 ├── css/
-│   └── style.css
+│   └── main.css
+│   └── normalize.css
 ├── img/
 │   └── (all images used in the project)
-├── index.html
-└── README.md
+├── .gitignore
+├── Milestone-Project-master.zip
+├── README.md
+└── index.html
 
 Screenshots
 Homepage
+![image](https://github.com/Asanag10/Milestone-Project/assets/62454405/9d4b4c43-853f-47a4-9a21-9d6273264299)
+
 
 About Me Section
+![image](https://github.com/Asanag10/Milestone-Project/assets/62454405/8ab9b23d-c80b-4b96-bc5a-2d430d6a4375)
+
 
 Project Showcase
+![image](https://github.com/Asanag10/Milestone-Project/assets/62454405/76f7d6a7-00e9-484d-b732-19156e780ba2)
+
 
 Contact Section
+![image](https://github.com/Asanag10/Milestone-Project/assets/62454405/70483d24-06f6-4584-bf78-0956adb7b00f)
+
 
 Contact Information
 If you like what you see or have any questions, feel free to get in touch:
