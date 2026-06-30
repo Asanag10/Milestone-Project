@@ -27,8 +27,9 @@ img {
     box-sizing: border-box;
 }
 .half-width {
-    width: 600px;
+    width: 50%;
     float: left;
+    box-sizing: border-box;
 }
 .third-width {
     width: 400px;
@@ -84,11 +85,6 @@ header h2 span {
     overflow: hidden;
 }
 
-#about .half-width {
-    width: 50%;
-    box-sizing: border-box;
-}
-
 #about h2 {
     font-family: 'Lora', serif;
     font-size: 36px;
@@ -137,8 +133,14 @@ header h2 span {
     padding: 0 10px;
 }
 
+#portfolio .image-container {
+    width: auto;
+    float: none;
+}
+
 .image-container {
     position: relative;
+    box-sizing: border-box;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -160,7 +162,7 @@ header h2 span {
 #contact {
     background-color: #ebebeb;
 }
-#contact .full-width {
+#contact > .full-width {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -287,7 +289,7 @@ header h2 span {
     #portfolio .full-width {
         grid-template-columns: repeat(2, 1fr);
     }
-    #contact .full-width {
+    #contact > .full-width {
         flex-direction: column;
         text-align: center;
     }
@@ -306,7 +308,7 @@ header h2 span {
         line-height: 38px;
     }
     #about .full-width,
-    #contact .full-width {
+    #contact > .full-width {
         padding: 50px 1.5rem;
     }
     #portfolio .full-width {
