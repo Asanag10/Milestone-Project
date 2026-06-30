@@ -8,34 +8,38 @@ body {
     color: #2b2b2b;
 }
 
-#about, #portfolio, #contact {
-    height: 600px;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /****** GRID ******/
 
 .full-width {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 .half-width {
-    width: 600px;
-    float: left;
-}
-.third-width {
-    width: 400px;
-    float: left;
+    flex: 1 1 50%;
+    box-sizing: border-box;
 }
 
 /****** HEADER ******/
 
 header {
-    height: 800px;
+    min-height: 800px;
     background: url('../img/hero.png');
     background-size: cover;
-    -wekit-background-attachment: fixed;
-    -o-background-attachment: fixed;
-    -moz-background-attachment: fixed;
+    background-attachment: fixed;
+}
+
+header .full-width {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 header h1 {
@@ -45,7 +49,7 @@ header h1 {
     padding: 65px 0 65px 25px;
 }
 nav {
-    float: right;
+    text-align: right;
     padding: 75px 25px;
 }
 nav ul li{
@@ -59,8 +63,8 @@ nav ul li a {
     padding-left: 80px;
 }
 header h2 {
+    flex-basis: 100%;
     width: 100%;
-    clear: both;
     font-family: 'Lora', serif;
     font-size: 72px;
     line-height: 80px;
@@ -74,10 +78,14 @@ header h2 span {
 /****** ABOUT ******/
 
 #about .full-width {
-    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+    padding: 80px 1rem;
 }
 
 #about h2 {
+    flex-basis: 100%;
     font-family: 'Lora', serif;
     font-size: 36px;
     padding-left: 50px;
@@ -98,7 +106,14 @@ header h2 span {
 }
 
 #portfolio .full-width {
-    padding: 115px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 115px 1rem;
+}
+
+.third-width {
+    box-sizing: border-box;
 }
 
 #portfolio img {
@@ -121,6 +136,7 @@ header h2 span {
 
 .image-container {
   position: relative;
+  overflow: hidden;
 }
 
 .clickable-image {
@@ -129,7 +145,7 @@ header h2 span {
 
 .clickable-image:hover {
   cursor: pointer;
-  transform: scale(1.5); /* Adjust the scale factor as per your preference */
+  transform: scale(1.05);
 }
 
 /****** CONTACT ******/
@@ -138,7 +154,11 @@ header h2 span {
     background-color: #ebebeb;
 }
 #contact .full-width {
-    padding: 110px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+    align-items: center;
+    padding: 110px 1rem;
 }
 #contact img#contact-img {
     border: 12px solid #ffffff;
@@ -198,7 +218,7 @@ header h2 span {
 
 #copyright h5 {
     color: #9b9b9b;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: 100;
@@ -208,39 +228,83 @@ header h2 span {
 
 /*****Floating Back-To-Top Button*****/
 
-#myBtn {
+.back-to-top {
     position: fixed;
-    bottom: 10px;
-    float: right;
-    right: 18.5%;
-    left: 77.25%;
-    max-width: 30px;
-    width: 100%;
-    font-size: 12px;
-    border-color: rgba(85, 85, 85, 0.2);
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(85, 85, 85, 0.2);
     background-color: rgb(100,100,100);
-    padding: .5px;
+    padding: 8px 14px;
     border-radius: 4px;
 }
 
 /*****On Hover Color Change*****/
 
-#myBtn:hover {
+.back-to-top:hover {
     background-color: #087e8b;
 }
 
-/***** GRID *****/
+/****** RESPONSIVE ******/
 
-.full-width {
-    width: 1200px;
-    margin: 0 auto;
+@media (max-width: 768px) {
+    #about .full-width,
+    #contact .full-width {
+        flex-direction: column;
+    }
+    .half-width {
+        flex-basis: 100%;
+    }
+    #portfolio .full-width {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    header .full-width {
+        flex-wrap: wrap;
+    }
+    nav {
+        padding: 20px 25px;
+    }
+    header {
+        background-attachment: scroll;
+    }
 }
-.half-width {
-    width: 600px;
-    float: left;
-}
-.third-width {
-    width: 400px;
-    float: left;
+
+@media (max-width: 480px) {
+    .half-width {
+        flex-basis: 100%;
+    }
+    #portfolio .full-width {
+        grid-template-columns: 1fr;
+        padding: 60px 1rem;
+    }
+    #about .full-width {
+        padding: 40px 1rem;
+    }
+    #contact .full-width {
+        flex-direction: column;
+        padding: 60px 1rem;
+    }
+    #contact img#contact-img {
+        margin-bottom: 30px;
+    }
+    nav ul li a {
+        padding-left: 25px;
+    }
+    nav ul li {
+        display: block;
+    }
+    header h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    header h1 {
+        padding: 30px 0 30px 25px;
+    }
 }
 
