@@ -81,6 +81,12 @@ header h2 span {
 
 #about .full-width {
     padding: 80px 1.5rem;
+    overflow: hidden;
+}
+
+#about .half-width {
+    width: 50%;
+    box-sizing: border-box;
 }
 
 #about h2 {
