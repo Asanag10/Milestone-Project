@@ -221,6 +221,10 @@ header h2 span {
     background-color: rgb(100,100,100);
     padding: .5px;
     border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 /*****On Hover Color Change*****/
