@@ -8,15 +8,23 @@ body {
     color: #2b2b2b;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 #about, #portfolio, #contact {
-    height: 600px;
+    min-height: 400px;
 }
 
 /****** GRID ******/
 
 .full-width {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
 }
 .half-width {
     width: 600px;
@@ -30,12 +38,10 @@ body {
 /****** HEADER ******/
 
 header {
-    height: 800px;
+    min-height: 600px;
     background: url('../img/hero.png');
     background-size: cover;
-    -wekit-background-attachment: fixed;
-    -o-background-attachment: fixed;
-    -moz-background-attachment: fixed;
+    background-attachment: fixed;
 }
 
 header h1 {
@@ -74,7 +80,7 @@ header h2 span {
 /****** ABOUT ******/
 
 #about .full-width {
-    padding: 80px 0;
+    padding: 80px 1.5rem;
 }
 
 #about h2 {
@@ -98,17 +104,23 @@ header h2 span {
 }
 
 #portfolio .full-width {
-    padding: 115px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+    padding: 90px 1.5rem;
 }
 
 #portfolio img {
-    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
 }
 
 #portfolio h3 {
     font-size: 24px;
     line-height: 32px;
-    width: 190px;
     margin: 0 auto;
 }
 
@@ -116,20 +128,25 @@ header h2 span {
     font-family: 'Lora', serif;
     font-size: 18px;
     line-height: 30px;
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 .image-container {
-  position: relative;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    overflow: hidden;
 }
 
 .clickable-image {
-  transition: transform 0.3s;
+    transition: transform 0.3s;
 }
 
 .clickable-image:hover {
-  cursor: pointer;
-  transform: scale(1.5); /* Adjust the scale factor as per your preference */
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 /****** CONTACT ******/
@@ -138,20 +155,25 @@ header h2 span {
     background-color: #ebebeb;
 }
 #contact .full-width {
-    padding: 110px 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 80px 1.5rem;
+}
+#contact .half-width {
+    float: none;
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
 }
 #contact img#contact-img {
     border: 12px solid #ffffff;
     display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     margin-left: auto;
-    margin-right: auto;
-
-}
-#contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
-    padding-left: 50px;
-}
-#contact #envelope {
-    padding: 0 10px 0 50px;
 }
 #contact h2 {
     font-family: 'Lora', serif;
@@ -162,7 +184,7 @@ header h2 span {
     font-size: 32px;
     font-weight: 400;
     line-height: 44px;
-    margin: -30px 0 5px 0;
+    margin: 0 0 5px 0;
 }
 #contact #socialmedia-header {
     font-weight: bold;
@@ -176,71 +198,119 @@ header h2 span {
     font-weight: bold;
     font-size: 28px;
 }
+#contact a.email-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 #contact ul {
     list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    margin-top: 20px;
 }
 #contact ul li {
-     display: inline-block;
-}
-#contact ul img {
-    font-size: 32px;
-    padding-right: 48px;
+    display: inline-block;
 }
 
 /***** COPYRIGHT *****/
 
-#copyright .full-width {
+#copyright {
     background-color: #ebebeb;
-    height: 50px;
-    overflow: hidden;
-    width: 100%;
+    border-top: 1px solid #d4d4d4;
+}
+#copyright .full-width {
+    padding: 24px 1.5rem;
 }
 
 #copyright h5 {
     color: #9b9b9b;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     font-style: italic;
     font-weight: 100;
     text-align: center;
-    padding-bottom: 20px;
+    margin: 0;
 }
 
 /*****Floating Back-To-Top Button*****/
 
-#myBtn {
+.back-to-top {
     position: fixed;
-    bottom: 10px;
-    float: right;
-    right: 18.5%;
-    left: 77.25%;
-    max-width: 30px;
-    width: 100%;
+    bottom: 20px;
+    right: 20px;
     font-size: 12px;
-    border-color: rgba(85, 85, 85, 0.2);
-    background-color: rgb(100,100,100);
-    padding: .5px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(85, 85, 85, 0.2);
+    background-color: rgb(100, 100, 100);
+    padding: 6px 10px;
     border-radius: 4px;
 }
 
 /*****On Hover Color Change*****/
 
-#myBtn:hover {
+.back-to-top:hover {
     background-color: #087e8b;
 }
 
-/***** GRID *****/
+/****** RESPONSIVE ******/
 
-.full-width {
-    width: 1200px;
-    margin: 0 auto;
-}
-.half-width {
-    width: 600px;
-    float: left;
-}
-.third-width {
-    width: 400px;
-    float: left;
+@media (max-width: 768px) {
+    header {
+        background-attachment: scroll;
+    }
+    header h2 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+    nav {
+        float: none;
+        padding: 0 25px 25px;
+    }
+    nav ul li a {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .half-width {
+        float: none;
+        width: 100%;
+    }
+    #portfolio .full-width {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #contact .full-width {
+        flex-direction: column;
+        text-align: center;
+    }
+    #contact img#contact-img {
+        margin: 0 auto;
+    }
+    #contact a.email-link,
+    #contact ul {
+        justify-content: center;
+    }
 }
 
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    #about .full-width,
+    #contact .full-width {
+        padding: 50px 1.5rem;
+    }
+    #portfolio .full-width {
+        grid-template-columns: 1fr;
+        padding: 60px 1.5rem;
+    }
+    #contact img#contact-img {
+        max-width: 280px;
+    }
+    #contact ul {
+        flex-wrap: wrap;
+    }
+}
